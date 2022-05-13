@@ -66,5 +66,5 @@ function aplicarCupon(cuponPrice) {
   let descuentos = parseInt(document.getElementById("inputDiscount").value);
   const descuentoDelCupon = cuponPrice.discount;
   const total = calcularPrecioConDescuento(precio, descuentos);
-  return message.innerText = `tu resultado es: ${descuentoDelCupon - total}$`;
+  return message.innerText = `tu resultado es: ${total - descuentoDelCupon}$`;
 }
