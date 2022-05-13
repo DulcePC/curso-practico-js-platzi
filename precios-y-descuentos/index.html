@@ -6,12 +6,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Precios y descuentos</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style type="text/tailwindcss">
+    .form-container {
+      @apply shadow-lg border border-teal-400 rounded-lg p-4 bg-teal-50 w-full;
+    }
+
+    .form-group {
+      @apply mb-4;
+    }
+
+    .form-control {
+      @apply border-2 border-emerald-900 h-10 w-full rounded-sm px-4 font-bold text-emerald-500 text-sm;
+    }
+
+    label {
+      @apply text-sm text-emerald-900 font-bold mb-2 block text-center;
+    }
+
+    button {
+      @apply border border-emerald-900 bg-white
+      w-full h-10 rounded-lg mb-2 duration-300
+      font-bold text-emerald-900 text-center uppercase text-sm
+      hover:bg-emerald-900 hover:text-white !important;
+    }
+  </style>
 </head>
 <body>
   <section class="md:py-14 py-8">
     <div class="max-w-2xl mx-auto px-4">
       <h1 class="text-center text-2xl font-bold mb-8 font-mono">Segundo taller del curso practico de javascript</h1>
-      <br>
+      <div class="grid grid cols-2">
+        <!-- Component -->
+        <div class="form-container">
+          <h3 class="font-bold text-center text-lg text-emerald-900 mb-2">Calcula el precio a pagar de tus productos con descuentos:</h3>
+          <form class="mt-4">
+            <div class="form-group">
+              <label for="inputPrice">Escribe el precio de tu producto:</label>
+              <input type="number" id="inputPrice" class="form-control" />
+            </div>
+            <div class="form-group">
+              <label for="inputDiscount">Escribe el monto de tu descuento:</label>
+              <input type="number" id="inputDiscount" class="form-control" />
+            </div>
+            <!-- cupon -->
+            <!-- <div class="form-group">
+              <label 222pqkpoewkfoewffewfewfffwfor="inputDiscount">Escribe tu cupon:</label>
+              <input type="number" id="inputDiscount" class="form-control" />
+            </div> -->
+            <button type="button" onclick="getDiscount()">Calcular descuento</button>
+            <p class="text-center text-sm text-emerald-900 font-bold" id="resultDiscount"></p>
+          </form>
+        </div>
+      </div>
     </div>
   </section>
   <script src="./main.js"></script>
