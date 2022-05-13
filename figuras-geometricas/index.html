@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Figuras geometricas | Taller 1: </title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style type="text/tailwindcss">
+    .form-container {
+      @apply shadow-lg border border-teal-400 rounded-lg p-4 bg-teal-50 w-full;
+    }
+
+    .form-group {
+      @apply mb-4;
+    }
+
+    .form-control {
+      @apply border-2 border-emerald-900 h-10 w-full rounded-sm px-4 font-bold text-emerald-500 text-sm;
+    }
+
+    label {
+      @apply text-sm text-emerald-900 font-bold mb-2 block text-center;
+    }
+
+    button {
+      @apply border border-emerald-900 bg-white
+      w-full h-10 rounded-lg mb-2 duration-300
+      font-bold text-emerald-900 text-center uppercase text-sm
+      hover:bg-emerald-900 hover:text-white !important;
+    }
+  </style>
+</head>
+<body>
+  <section class="md:py-14 py-8">
+    <div class="max-w-2xl mx-auto px-4">
+      <h1 class="text-center text-2xl font-bold mb-8 font-mono">Primer taller del curso practico de javascript</h1>
+      <!--  -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Component -->
+        <div class="form-container">
+          <h3 class="font-bold text-center text-lg text-emerald-900 mb-2">Cuadrado</h3>
+          <p class="text-center text-sm text-emerald-900 font-bold">Calcula el area y perimetro de un cuadraro</p>
+          <form class="mt-4">
+            <div class="form-group">
+              <label for="inputSquare">Cuanto mide cada lado de tu cuadrado:</label>
+              <input type="number" id="inputSquare" class="form-control">
+            </div>
+            <button type="button" onclick="calcularPerimetroCuadrado()">Calcular el perimetro</button>
+            <button type="button" onclick="calcularAreaCuadrado()">Calcular el area</button>
+            <p class="text-center text-sm text-emerald-900 font-bold" id="resultSquear"></p>
+          </form>
+        </div>
+        <!-- Component -->
+        <div class="form-container">
+          <h3 class="font-bold text-center text-lg text-emerald-900 mb-2">Triangulo</h3>
+          <p class="text-center text-sm text-emerald-900 font-bold">Calcula el area y perimetro de un Triangulo</p>
+          <form class="mt-4">
+            <div class="form-group">
+              <label for="inputTriangleA">Cuanto mide tu side A:</label>
+              <input type="number" id="inputTriangleA" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="inputTriangleB">Cuanto mide tu side B:</label>
+              <input type="number" id="inputTriangleB" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="inputTriangleBase">Cuanto mide tu base:</label>
+              <input type="number" id="inputTriangleBase" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="inputTriangleHeight">Cuanto mide tu altura:</label>
+              <input type="number" id="inputTriangleHeight" class="form-control">
+            </div>
+            <button type="button" onclick="calcularPerimetroTriangulo()">Calcular el perimetro</button>
+            <button type="button" onclick="calcularAreaTriangulo()">Calcular el area</button>
+            <p class="text-center text-sm text-emerald-900 font-bold" id="resultTriangle"></p>
+          </form>
+        </div>
+        <!-- Component -->
+        <div class="form-container">
+          <h3 class="font-bold text-center text-lg text-emerald-900 mb-2">Triangulo isosceles</h3>
+          <form class="mt-4">
+            <div class="form-group">
+              <label for="inputTriangleA2">Cuanto mide tu side A:</label>
+              <input type="number" id="inputTriangleA2" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="inputTriangleB2">Cuanto mide tu side B:</label>
+              <input type="number" id="inputTriangleB2" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="inputTriangleBase2">Cuanto mide tu base:</label>
+              <input type="number" id="inputTriangleBase2" class="form-control">
+            </div>
+            <button type="button" onclick="getDataTrianguloIsoles()">Calcular la altura</button>
+            <p class="text-center text-sm text-emerald-900 font-bold" id="resultTriangle2"></p>
+          </form>
+        </div>
+        <!-- Component -->
+        <div class="form-container">
+          <h3 class="font-bold text-center text-lg text-emerald-900 mb-2">Circulo</h3>
+          <form class="mt-4">
+            <div class="form-group">
+              <label for="inputCircle">Cuanto mide tu radio:</label>
+              <input type="number" id="inputCircle" class="form-control">
+            </div>
+            <button type="button" onclick="getDataDiamtroCircle()">Calcular diametro</button>
+            <button type="button" onclick="getDataPerimetroCircle()">Calcular perimetro</button>
+            <button type="button" onclick="getDataAreaCircle()">Calcular area</button>
+            <p class="text-center text-sm text-emerald-900 font-bold" id="resultCircle"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="./main.js"></script>
+</body>
+</html>
