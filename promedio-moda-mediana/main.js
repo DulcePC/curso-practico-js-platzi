@@ -10,9 +10,12 @@ function getMediana(list) {
     return console.log(list[middleItem]);
   }
 }
-getMediana([100,
-  200,
-  500,
-  400000000,
-  10,
-  90]);
+getMediana([100,200,500,400000000,10,90]);
+
+
+//Promedio
+function getPromedio(list) {
+
+}
+
+getPromedio([100,200,300,500]);
