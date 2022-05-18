@@ -12,10 +12,10 @@ function getMediana(list) {
 }
 getMediana([100,200,500,400000000,10,90]);
 
-
 //Promedio
 function getPromedio(list) {
-
+  let totalElementsArray = list.reduce((total, totalAcumulado) => total + totalAcumulado)
+  let resultado = totalElementsArray / list.length;
+  return console.log(resultado)
 }
-
 getPromedio([100,200,300,500]);
